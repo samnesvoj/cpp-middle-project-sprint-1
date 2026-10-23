@@ -23,6 +23,7 @@ public:
     std::string GetInputFile() const { return inputFile_; }
     std::string GetOutputFile() const { return outputFile_; }
     std::string GetPassword() const { return password_; }
+    bool IsHelpRequested() const { return helpRequested_; }
 
 private:
     COMMAND_TYPE command_;
@@ -35,6 +36,7 @@ private:
     std::string inputFile_;
     std::string outputFile_;
     std::string password_;
+    bool helpRequested_ = false;
 
     boost::program_options::options_description desc_;
 };
